@@ -1,0 +1,689 @@
+.four-hand-container {
+  height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+  background: linear-gradient(135deg, #166534 0%, #15803d 50%, #14532d 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  --card-height: 150px;
+}
+
+.four-hand-inner {
+  position: relative;
+  width: calc(100% - 200px);
+  height: calc(100vh - 100px);
+}
+
+
+.four-hand-container .hand-section {
+  height: 200px;
+  position: absolute;
+}
+
+.four-hand-container .bottom-hand {
+  width: 34%;
+  bottom: 0;
+  left: 33%;
+  right: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.four-hand-container .top-hand {
+  width: 34%;
+  top: 0;
+  left: 33%;
+  right: 33%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.four-hand-container .left-hand {
+  top: 15%;
+  left: 0;
+  width: 200px;
+  height: 70%;
+}
+
+.four-hand-container .right-hand {
+  top: 15%;
+  right: 0;
+  width: 200px;
+  height: 70%;
+}
+
+.bottom-hand .card-item {
+  position: absolute !important;
+  transition: transform 0.3s ease, z-index 0.1s ease;
+  height: var(--card-height)!important;
+  transform-origin: 50% 100%;
+}
+
+
+.bottom-hand .card-item:nth-child(1) {
+  transform: rotate(-54deg) translateY(0px);
+}
+
+.bottom-hand .card-item:nth-child(2) {
+  transform: rotate(-45deg) translateY(-5px);
+}
+
+.bottom-hand .card-item:nth-child(3) {
+  transform: rotate(-36deg) translateY(-10px);
+}
+
+.bottom-hand .card-item:nth-child(4) {
+  transform: rotate(-27deg) translateY(-15px);
+}
+
+.bottom-hand .card-item:nth-child(5) {
+  transform: rotate(-18deg) translateY(-20px);
+}
+
+.bottom-hand .card-item:nth-child(6) {
+  transform: rotate(-9deg) translateY(-25px);
+}
+
+.bottom-hand .card-item:nth-child(7) {
+  transform: rotate(0deg) translateY(-30px);
+}
+
+.bottom-hand .card-item:nth-child(8) {
+  transform: rotate(9deg) translateY(-25px);
+}
+
+.bottom-hand .card-item:nth-child(9) {
+  transform: rotate(18deg) translateY(-20px);
+}
+
+.bottom-hand .card-item:nth-child(10) {
+  transform: rotate(27deg) translateY(-15px);
+}
+
+.bottom-hand .card-item:nth-child(11) {
+  transform: rotate(36deg) translateY(-10px);
+}
+
+.bottom-hand .card-item:nth-child(12) {
+  transform: rotate(45deg) translateY(-5px);
+}
+
+.bottom-hand .card-item:nth-child(13) {
+  transform: rotate(54deg) translateY(0px);
+}
+
+/* Hover effect to lift and highlight cards */
+.bottom-hand .card-item:hover {
+  transform: rotate(var(--rotation, 0deg)) translateY(-30px) scale(1.05);
+  z-index: 100 !important;
+  cursor: pointer;
+}
+
+/* Set CSS custom properties for hover effect */
+.bottom-hand .card-item:nth-child(1):hover {
+  --rotation: -54deg;
+}
+
+.bottom-hand .card-item:nth-child(2):hover {
+  --rotation: -45deg;
+}
+
+.bottom-hand .card-item:nth-child(3):hover {
+  --rotation: -36deg;
+}
+
+.bottom-hand .card-item:nth-child(4):hover {
+  --rotation: -27deg;
+}
+
+.bottom-hand .card-item:nth-child(5):hover {
+  --rotation: -18deg;
+}
+
+.bottom-hand .card-item:nth-child(6):hover {
+  --rotation: -9deg;
+}
+
+.bottom-hand .card-item:nth-child(7):hover {
+  --rotation: 0deg;
+}
+
+.bottom-hand .card-item:nth-child(8):hover {
+  --rotation: 9deg;
+}
+
+.bottom-hand .card-item:nth-child(9):hover {
+  --rotation: 18deg;
+}
+
+.bottom-hand .card-item:nth-child(10):hover {
+  --rotation: 27deg;
+}
+
+.bottom-hand .card-item:nth-child(11):hover {
+  --rotation: 36deg;
+}
+
+.bottom-hand .card-item:nth-child(12):hover {
+  --rotation: 45deg;
+}
+
+.bottom-hand .card-item:nth-child(13):hover {
+  --rotation: 54deg;
+}
+
+/* Animation keyframes for card flip */
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+
+
+
+
+/* Existing styles remain the same, add these new styles: */
+
+/* Top hand - fan layout similar to bottom hand */
+.four-hand-container .top-hand {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.top-hand .card-item {
+  position: absolute !important;
+  /* transform-origin: top center; */
+  transform-origin: 50% 0%;
+  transition: transform 0.3s ease, z-index 0.1s ease;
+  height: var(--card-height)!important
+}
+
+/* Calculate rotation and position for each card in the top fan (inverted) */
+.top-hand .card-item:nth-child(1) {
+  transform: rotate(54deg) translateY(0px)
+}
+
+.top-hand .card-item:nth-child(2) {
+  transform: rotate(45deg) translateY(5px)
+}
+
+.top-hand .card-item:nth-child(3) {
+  transform: rotate(36deg) translateY(10px)
+}
+
+.top-hand .card-item:nth-child(4) {
+  transform: rotate(27deg) translateY(15px)
+}
+
+.top-hand .card-item:nth-child(5) {
+  transform: rotate(18deg) translateY(20px)
+}
+
+.top-hand .card-item:nth-child(6) {
+  transform: rotate(9deg) translateY(25px);
+}
+
+.top-hand .card-item:nth-child(7) {
+  transform: rotate(0deg) translateY(30px);
+}
+
+.top-hand .card-item:nth-child(8) {
+  transform: rotate(-9deg) translateY(25px);
+}
+
+.top-hand .card-item:nth-child(9) {
+  transform: rotate(-18deg) translateY(20px);
+}
+
+.top-hand .card-item:nth-child(10) {
+  transform: rotate(-27deg) translateY(15px);
+}
+
+.top-hand .card-item:nth-child(11) {
+  transform: rotate(-36deg) translateY(10px)
+}
+
+.top-hand .card-item:nth-child(12) {
+  transform: rotate(-45deg) translateY(5px);
+}
+
+.top-hand .card-item:nth-child(13) {
+  transform: rotate(-54deg) translateY(0px);
+}
+
+/* Hover effect to lift and highlight top hand cards */
+.top-hand .card-item:hover {
+  transform: rotate(var(--rotation, 0deg)) translateY(30px) scale(1.05);
+  z-index: 100 !important;
+  cursor: pointer;
+}
+
+/* Set CSS custom properties for top hand hover effect */
+.top-hand .card-item:nth-child(1):hover {
+  --rotation: 60deg;
+}
+
+.top-hand .card-item:nth-child(2):hover {
+  --rotation: 50deg;
+}
+
+.top-hand .card-item:nth-child(3):hover {
+  --rotation: 40deg;
+}
+
+.top-hand .card-item:nth-child(4):hover {
+  --rotation: 30deg;
+}
+
+.top-hand .card-item:nth-child(5):hover {
+  --rotation: 20deg;
+}
+
+.top-hand .card-item:nth-child(6):hover {
+  --rotation: 10deg;
+}
+
+.top-hand .card-item:nth-child(7):hover {
+  --rotation: 0deg;
+}
+
+.top-hand .card-item:nth-child(8):hover {
+  --rotation: -10deg;
+}
+
+.top-hand .card-item:nth-child(9):hover {
+  --rotation: -20deg;
+}
+
+.top-hand .card-item:nth-child(10):hover {
+  --rotation: -30deg;
+}
+
+.top-hand .card-item:nth-child(11):hover {
+  --rotation: -40deg;
+}
+
+.top-hand .card-item:nth-child(12):hover {
+  --rotation: -50deg;
+}
+
+.top-hand .card-item:nth-child(13):hover {
+  --rotation: -60deg;
+}
+
+
+.four-hand-container .left-hand {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-hand .card-item {
+  position: absolute !important;
+  transition: transform 0.3s ease, z-index 0.1s ease;
+  height: var(--card-height)!important;
+  transform: rotate(90deg);
+  transform-origin: 50% 10%;
+}
+
+.left-hand .card-item:nth-child(1) {
+  transform: rotate(-120deg) translateX(0px) translateY(0px);
+}
+
+.left-hand .card-item:nth-child(2) {
+  transform: rotate(-115deg) translateX(0px) translateY(5px);
+}
+
+.left-hand .card-item:nth-child(3) {
+  transform: rotate(-110deg) translateX(0px) translateY(10px);
+}
+
+.left-hand .card-item:nth-child(4) {
+  transform: rotate(-105deg) translateX(0px) translateY(15px);
+}
+
+.left-hand .card-item:nth-child(5) {
+  transform: rotate(-100deg) translateX(0px) translateY(20px);
+}
+
+.left-hand .card-item:nth-child(6) {
+  transform: rotate(-95deg) translateX(0px) translateY(25px);
+}
+
+.left-hand .card-item:nth-child(7) {
+  transform: rotate(-90deg) translateX(0px) translateY(30px)
+}
+
+.left-hand .card-item:nth-child(8) {
+  transform: rotate(-85deg) translateX(0px) translateY(25px)
+}
+
+.left-hand .card-item:nth-child(9) {
+  transform: rotate(-80deg) translateX(0px) translateY(20px)
+}
+
+.left-hand .card-item:nth-child(10) {
+  transform: rotate(-75deg) translateX(0px) translateY(15px)
+}
+
+.left-hand .card-item:nth-child(11) {
+  transform: rotate(-70deg) translateX(0px) translateY(10px)
+}
+
+.left-hand .card-item:nth-child(12) {
+  transform: rotate(-65deg) translateX(0px) translateY(5px)
+}
+
+.left-hand .card-item:nth-child(13) {
+  transform: rotate(-60deg) translateX(0px) translateY(0)
+}
+
+
+
+.left-hand .card-item:hover {
+  transform: rotate(var(--rotation, 0deg)) translateY(50px) scale(1.05);
+  z-index: 100 !important;
+  cursor: pointer;
+}
+
+.left-hand .card-item:nth-child(1):hover {
+  --rotation: -120deg;
+}
+
+.left-hand .card-item:nth-child(2):hover {
+  --rotation: -115deg;
+}
+
+.left-hand .card-item:nth-child(3):hover {
+  --rotation: -110deg;
+}
+
+.left-hand .card-item:nth-child(4):hover {
+  --rotation: -105deg;
+}
+
+.left-hand .card-item:nth-child(5):hover {
+  --rotation: -100deg;
+}
+
+.left-hand .card-item:nth-child(6):hover {
+  --rotation: -95deg;
+}
+
+.left-hand .card-item:nth-child(7):hover {
+  --rotation: -90deg;
+}
+
+.left-hand .card-item:nth-child(8):hover {
+  --rotation: -85deg;
+}
+
+.left-hand .card-item:nth-child(9):hover {
+  --rotation: -80deg;
+}
+
+.left-hand .card-item:nth-child(10):hover {
+  --rotation: -75deg;
+}
+
+.left-hand .card-item:nth-child(11):hover {
+  --rotation: -70deg;
+}
+
+.left-hand .card-item:nth-child(12):hover {
+  --rotation: -65deg;
+}
+
+.left-hand .card-item:nth-child(13):hover {
+  --rotation: -60deg;
+}
+
+
+.four-hand-container .right-hand {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-hand .card-item {
+  position: absolute !important;
+  transition: transform 0.3s ease, z-index 0.1s ease;
+  height: var(--card-height)!important;
+  transform-origin: 50% 10%;
+}
+
+
+.right-hand .card-item:nth-child(1) {
+  transform: rotate(120deg) translateX(0px) translateY(0px);
+}
+
+.right-hand .card-item:nth-child(2) {
+  transform: rotate(115deg) translateX(0px) translateY(5px);
+}
+
+.right-hand .card-item:nth-child(3) {
+  transform: rotate(110deg) translateX(0px) translateY(10px);
+}
+
+.right-hand .card-item:nth-child(4) {
+  transform: rotate(105deg) translateX(0px) translateY(15px);
+}
+
+.right-hand .card-item:nth-child(5) {
+  transform: rotate(100deg) translateX(0px) translateY(20px);
+}
+
+.right-hand .card-item:nth-child(6) {
+  transform: rotate(95deg) translateX(0px) translateY(25px);
+}
+
+.right-hand .card-item:nth-child(7) {
+  transform: rotate(90deg) translateX(0px) translateY(30px)
+}
+
+.right-hand .card-item:nth-child(8) {
+  transform: rotate(85deg) translateX(0px) translateY(25px)
+}
+
+.right-hand .card-item:nth-child(9) {
+  transform: rotate(80deg) translateX(0px) translateY(20px)
+}
+
+.right-hand .card-item:nth-child(10) {
+  transform: rotate(75deg) translateX(0px) translateY(15px)
+}
+
+.right-hand .card-item:nth-child(11) {
+  transform: rotate(70deg) translateX(0px) translateY(10px)
+}
+
+.right-hand .card-item:nth-child(12) {
+  transform: rotate(65deg) translateX(0px) translateY(5px)
+}
+
+.right-hand .card-item:nth-child(13) {
+  transform: rotate(60deg) translateX(0px) translateY(0px)
+}
+
+
+.right-hand .card-item:hover {
+  transform: rotate(var(--rotation, 0deg)) translateY(40px) scale(1.05);
+  z-index: 100 !important;
+  cursor: pointer;
+}
+
+
+.right-hand .card-item:nth-child(1):hover {
+  --rotation: 120deg;
+}
+
+.right-hand .card-item:nth-child(2):hover {
+  --rotation: 115deg;
+}
+
+.right-hand .card-item:nth-child(3):hover {
+  --rotation: 110deg;
+}
+
+.right-hand .card-item:nth-child(4):hover {
+  --rotation: 105deg;
+}
+
+.right-hand .card-item:nth-child(5):hover {
+  --rotation: 100deg;
+}
+
+.right-hand .card-item:nth-child(6):hover {
+  --rotation: 95deg;
+}
+
+.right-hand .card-item:nth-child(7):hover {
+  --rotation: 90deg;
+}
+
+.right-hand .card-item:nth-child(8):hover {
+  --rotation: 85deg;
+}
+
+.right-hand .card-item:nth-child(9):hover {
+  --rotation: 80deg;
+}
+
+.right-hand .card-item:nth-child(10):hover {
+  --rotation: 75deg;
+}
+
+.right-hand .card-item:nth-child(11):hover {
+  --rotation: 70deg;
+}
+
+.right-hand .card-item:nth-child(12):hover {
+  --rotation: 65deg;
+}
+
+.right-hand .card-item:nth-child(13):hover {
+  --rotation: 60deg;
+}
+
+
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotateY(50deg) scale(0.95);
+  }
+
+  50% {
+    transform: rotateY(180deg) scale(0.9);
+  }
+
+  75% {
+    transform: rotateY(315deg) scale(0.95);
+  }
+
+  100% {
+    transform: rotateY(360deg) scale(1);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .four-hand-container .top-hand {
+    width: 80%;
+    left: 10%;
+  }
+
+  .four-hand-container .bottom-hand {
+    width: 80%;
+    left: 10%;
+  }
+
+  .four-hand-container .left-hand,
+  .four-hand-container .right-hand {
+    width: 150px;
+    height: 50%;
+    top: 25%;
+  }
+}
+
+.card-distribution-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+.card-distribution-info h3 {
+  margin: 0 0 10px 0;
+  color: #4ade80;
+}
+
+.card-distribution-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Hand labels for debugging/info */
+.hand-label {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  z-index: 10;
+}
+
+.bottom-hand .hand-label {
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top-hand .hand-label {
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.left-hand .hand-label {
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.right-hand .hand-label {
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+}

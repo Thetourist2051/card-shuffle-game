@@ -1,0 +1,184 @@
+:root {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card_container {
+  width: 100%;
+  height: 100dvh;
+  background-color: #166534;
+}
+
+/* Card Shuffle Component Styles */
+.card-shuffle-container {
+  background: linear-gradient(135deg, #166534 0%, #15803d 50%, #14532d 100%);
+  padding: 2rem;
+}
+
+.card-shuffle-wrapper {
+  max-width: max(700px, 90%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-shuffle-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-shuffle-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.card-shuffle-subtitle {
+  color: #bbf7d0;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-shuffle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-shuffle-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.card-shuffle-button:hover {
+  transform: scale(1.05);
+}
+
+.shuffle-button {
+  background-color: #b45309;
+}
+
+.shuffle-button:hover {
+  background-color: #92400e;
+}
+
+.shuffle-button:disabled {
+  background-color: #78350f;
+  transform: scale(1);
+}
+
+.reset-button {
+  background-color: #2563eb;
+}
+
+.reset-button:hover {
+  background-color: #1d4ed8;
+}
+
+.shuffle-count {
+  color: white;
+}
+
+.shuffle-count span:first-child {
+  font-size: 1.125rem;
+}
+
+.shuffle-count span:last-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f59e0b;
+}
+
+.card-grid-container {
+  position: relative;
+}
+
+
+.card-grid.shuffling {
+  filter: blur(4px);
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.card-item {
+  position: relative;
+  aspect-ratio: 2/3;
+  transition: all 0.5s;
+}
+
+.card-item:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.shuffling-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  background-color: #157a3b9e;
+  position: relative;
+}
+
+.shuffling-message {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+.card-footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #bbf7d0;
+}
+
+.card-footer p {
+  font-size: 0.875rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+
