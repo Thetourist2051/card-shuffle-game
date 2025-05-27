@@ -182,7 +182,7 @@ const CardShuffle = () => {
                   suit={card.suit}
                   rank={card.rank}
                   id={card.id}
-                  showcard={true}
+                  showcard={showCard}
                   size="xs"
                 />
               </div>
@@ -205,7 +205,7 @@ const CardShuffle = () => {
                   suit={card.suit}
                   rank={card.rank}
                   id={card.id}
-                  showcard={true}
+                  showcard={showCard}
                   size="xs"
                 />
               </div>
@@ -228,7 +228,7 @@ const CardShuffle = () => {
                   suit={card.suit}
                   rank={card.rank}
                   id={card.id}
-                  showcard={true}
+                  showcard={showCard}
                   size="xs"
                 />
               </div>
