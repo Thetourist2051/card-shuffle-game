@@ -1,54 +1,102 @@
-# React + TypeScript + Vite
+# 🎴 Card Shuffle Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautifully designed and interactive card shuffling game built using **React (with TypeScript)** and **Vite**. This project showcases a smooth card fan-out animation, inspired by real-world card handling, perfect for desktop interfaces.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📁 Folder Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+CARD-SHUFFLE-GAME/
+├── public/                  # Static files
+├── src/                    # Main source code
+│   ├── assets/             # Image and static assets
+│   ├── components/         # Reusable React components
+│   ├── utils/              # Utility functions and helpers
+│   ├── App.tsx             # Root component
+│   ├── App.css             # Component-specific styles
+│   ├── index.css           # Global styles
+│   ├── main.tsx            # Entry point
+│   └── vite-env.d.ts       # Vite environment definitions
+├── index.html              # HTML template
+├── .gitignore              # Files/folders to ignore in Git
+├── README.md               # Project documentation
+├── LICENSE                 # License file
+├── package.json            # Project metadata and dependencies
+├── package-lock.json       # Lock file for npm
+├── vite.config.ts          # Vite configuration
+├── tsconfig.json           # TypeScript config
+└── tsconfig.*.json         # Additional TS config files
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Thetourist2051/card-shuffle-game/card-shuffle-game.git
+cd card-shuffle-game
 ```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+Visit `http://localhost:5173` to view the app in the browser.
+
+---
+
+## 🎯 Features
+
+- 🌀 Beautiful fan-out card layout using CSS transforms
+- 🛠️ Built with React, TypeScript, and Vite
+- ⚙️ Easy-to-maintain file structure
+- 🌈 Fully responsive design (add media queries if needed)
+- 🎮 Future-ready to integrate card game logic
+
+---
+
+## 🧠 Technologies Used
+
+- React 18+
+- TypeScript
+- Vite
+- CSS3 (Flexbox, Transforms)
+- Node.js & npm
+
+---
+
+## 📌 TODO
+
+- [x] Static layout with fan-styled cards
+- [x] Add shuffling animation
+- [ ] Implement deck logic and gameplay
+- [ ] Add multiplayer support
+- [ ] Responsive tweaks for mobile view
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+This project is licensed under the terms of the MIT license.
+
+---
+
+> Designed and developed by **Afriduzzaman** ✨
+
