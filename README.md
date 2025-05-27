@@ -3,8 +3,12 @@
 A beautifully designed and interactive card shuffling game built using **React (with TypeScript)** and **Vite**. This project showcases a smooth card fan-out animation, inspired by real-world card handling, perfect for desktop interfaces.
 
 ---
+## 📁 Shuffling Preview
 
-![Shuffle Preview](./src/assets/CardShuffleGame.gif)
+<p align="center">
+  <img src="./src/assets/CardShuffleGame.gif" alt="Shuffle Preview" />
+</p>
+
 
 ## 📁 Folder Structure
 
