@@ -4,6 +4,8 @@ A beautifully designed and interactive card shuffling game built using **React (
 
 ---
 
+![Shuffle Preview](./src/assets/CardShuffleGame.gif)
+
 ## 📁 Folder Structure
 
 ```
